@@ -1,0 +1,6 @@
+name=AdMob Advertisement
+description=Implements AdMob banner and interstitial ads for iOS and Android.
+author=Simone C. (Abliblablobla)
+website=http://www.stencyl.com
+version=3.0
+compatibility=iOS and Android

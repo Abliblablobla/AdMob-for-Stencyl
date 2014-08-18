@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension>
+    
+	<!-- iOS only -->
+    
+    <section if="ios">
+        
+        <ndll name="myadmob" />
+        
+        <dependency name="AdSupport.framework" if="ios" />
+        <dependency name="AVFoundation.framework" if="ios" />
+        <dependency name="AudioToolbox.framework" if="ios" />
+        <dependency name="SystemConfiguration.framework" if="ios" />
+        <dependency name="MessageUI.framework" if="ios" />
+        <dependency name="StoreKit.framework" if="ios" />
+        <dependency name="CoreGraphics.framework" if="ios" />
+        <dependency name="CoreTelephony.framework" if="ios" />
+        
+        <dependency name="ndll/iPhone/libGoogleAdMobAds.a" if="ios" />
+        
+        <ios linker-flags="-v -fobjc-arc -force_load $SRCROOT/$PRODUCT_NAME/lib/$ARCHS/libGoogleAdMobAds.a" />
+        
+    </section>
+    
+    
+    <!-- Android only -->
+    
+    <section if="android">
+        
+        <classpath name="src" />
+        
+        <dependency name="myadmob" path="dependencies/myadmob" if="android" />
+        
+        <android extension="com.abliblablobla.AdMob.MyAdmob" />
+        
+    </section>
+    
+</extension>

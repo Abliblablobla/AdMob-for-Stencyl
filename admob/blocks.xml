@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<palette>
+    
+    <block tag="initBanner" spec="Initialize AdMob %2 banner ad with 'Ad Unit ID': %0 at: %1 (for device with 'device ID': %3 )" code="MyAdmob.initBanner(~,~,~,~);" type="action" color="charcoal" returns="void">
+        <fields>
+            <text order="0"></text>
+            <dropdown order="1">
+				<choices>
+					<c text="Top - Center" code="1"></c>
+                    <c text="Top - Left" code="4"></c>
+                    <c text="Top - Right" code="5"></c>
+					<c text="Bottom - Center" code="0"></c>
+                    <c text="Bottom - Left" code="2"></c>
+                    <c text="Bottom - Right" code="3"></c>
+				</choices>
+			</dropdown>
+            <dropdown order="2">
+				<choices>
+					<c text="normal" code="0"></c>
+					<c text="smart" code="1"></c>
+				</choices>
+			</dropdown>
+            <text order="3"></text>
+        </fields>
+    </block>
+    
+    <block tag="showBanner" spec="Show AdMob banner ad" code="MyAdmob.showBanner();" type="action" color="charcoal" returns="void">
+        <fields>
+        </fields>
+    </block>
+    
+    <block tag="hideBanner" spec="Hide AdMob banner ad" code="MyAdmob.hideBanner();" type="action" color="charcoal" returns="void">
+        <fields>
+        </fields>
+    </block>
+    
+    <block tag="chengeBannerPosition" spec="Move AdMob banner to %0 of the screen" code="MyAdmob.changeBannerPosition(~);" type="action" color="charcoal" returns="void">
+        <fields>
+            <dropdown order="0">
+				<choices>
+					<c text="Top - Center" code="1"></c>
+                    <c text="Top - Left" code="4"></c>
+                    <c text="Top - Right" code="5"></c>
+					<c text="Bottom - Center" code="0"></c>
+                    <c text="Bottom - Left" code="2"></c>
+                    <c text="Bottom - Right" code="3"></c>
+				</choices>
+			</dropdown>
+        </fields>
+    </block>
+    
+    <block tag="getBannerInfo" spec="AdMob banner %0" code="MyAdmob.getBannerInfo(~)" type="normal" color="charcoal" returns="boolean">
+        <fields>
+            <dropdown order="0">
+				<choices>
+					<c text="did successfully load" code="0"></c>
+					<c text="did fail to load" code="1"></c>
+                    <c text="was opened" code="2"></c>
+                    <c text="was closed" code="3"></c>
+                    <c text="made a user leave the app" code="4"></c>
+				</choices>
+			</dropdown>
+        </fields>
+    </block>
+    
+    <block tag="initInterstitial" spec="Initialize AdMob fullscreen ad with 'Ad Unit ID': %0 (for device with 'device ID': %1 )" code="MyAdmob.initInterstitial(~,~);" type="action" color="charcoal" returns="void">
+        <fields>
+            <text order="0"></text>
+            <text order="1"></text>
+        </fields>
+    </block>
+    
+    <block tag="loadInterstitial" spec="Load AdMob fullscreen ad" code="MyAdmob.loadInterstitial();" type="action" color="charcoal" returns="void">
+        <fields>
+        </fields>
+    </block>
+    
+    <block tag="showInterstitial" spec="Show AdMob fullscreen ad" code="MyAdmob.showInterstitial();" type="action" color="charcoal" returns="void">
+        <fields>
+        </fields>
+    </block>
+    
+    <block tag="getInterstitialInfo" spec="AdMob fullscreen ad %0 " code="MyAdmob.getInterstitialInfo(~)" type="normal" color="charcoal" returns="boolean">
+        <fields>
+            <dropdown order="0">
+				<choices>
+					<c text="did successfully load" code="0"></c>
+					<c text="did fail to load" code="1"></c>
+				</choices>
+			</dropdown>
+        </fields>
+    </block>
+
+</palette>
